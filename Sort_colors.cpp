@@ -28,3 +28,21 @@ public:
         }
     }
 };
+
+
+//Solution:- 
+
+// here the trick is that you need to sort the array in one pass. 
+
+// hence we think of three areas in array for 0s,1s,2s.
+// like [0s][1s][2s]
+
+// then we, need to use three pointers i.e i,low high
+// i and low pointing at the beginning while high pointing at the end.
+// low work as the boundary for 0s,high work as th boundary for 2s.
+
+// then we swap accordingly and increment decrement the pointers.
+
+// one special case is that while swapping for 2 we do not increment the i cause the number we swapped from nums[high] from right side is yet unknown hence in the loop it must be checked once again.
+
+// 1s will be placed automatically if we swap just for 0s and 1s.
